@@ -43,7 +43,7 @@
       }
   },
   created(){
-    this.$http.get("http://wanghyungjun-backend-dev.us-west-2.elasticbeanstalk.com/blogapi/previousposts", {params:  {category: this.categoryName}}).then(function (data) {
+    this.$http.get("http://blog-backend-dev.ap-northeast-2.elasticbeanstalk.com/blogapi/previousposts", {params:  {category: this.categoryName}}).then(function (data) {
       this.postdata=data.body;
     });
     bus.$on("seachChanged",(data)=>{
@@ -51,7 +51,7 @@
     });
     bus.$on("tossCategory",(data)=>{
       this.categoryName=data;
-      this.$http.get("http://wanghyungjun-backend-dev.us-west-2.elasticbeanstalk.com/blogapi/previousposts", {params:  {category: this.categoryName}}).then(function (data) {
+      this.$http.get("http://blog-backend-dev.ap-northeast-2.elasticbeanstalk.com/blogapi/previousposts", {params:  {category: this.categoryName}}).then(function (data) {
         this.postdata=data.body;
         if(this.postdata.length==0){
           this.nothing=true;
