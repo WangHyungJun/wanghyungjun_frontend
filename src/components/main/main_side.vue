@@ -29,14 +29,14 @@
         bus.$emit("seachChanged", this.search);
       },
       tossCategory: function (elm) {
-        console.log(elm.target.innerText);
+        // console.log(elm.target.innerText);
         bus.$emit("tossCategory", elm.target.innerText)
       }
     },
     created(){
-      this.$http.get("http://blog-backend-dev.ap-northeast-2.elasticbeanstalk.com/blogapi/categories").then(function (data) {
-        this.categories=data.body;
-      });
+      // this.$http.get("http://blog-backend-dev.ap-northeast-2.elasticbeanstalk.com/blogapi/categories").then(function (data) {
+      //   this.categories=data.body;
+      // });
     }
   }
 </script>
