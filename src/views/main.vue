@@ -29,7 +29,7 @@
       },
       created(){
         this.$http.get("http://blog-backend-dev.ap-northeast-2.elasticbeanstalk.com/blogapi/categories").then(function (data) {
-          this.categories=data.body;
+          // this.categories=data.body;
         });
       },
     }
