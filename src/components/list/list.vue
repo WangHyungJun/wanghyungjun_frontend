@@ -43,7 +43,7 @@
       }
   },
   created(){
-    this.$http.get("http://blog-backend-dev.ap-northeast-2.elasticbeanstalk.com/blogapi/previousposts", {params:  {category: this.categoryName}}).then(function (data) {
+    this.$http.get("https://damp-earth-74898.herokuapp.com/blogapi/previousposts", {params:  {category: this.categoryName}}).then(function (data) {
       this.postdata=data.body;
     });
     bus.$on("seachChanged",(data)=>{
