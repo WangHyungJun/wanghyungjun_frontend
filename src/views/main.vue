@@ -28,7 +28,7 @@
           }
       },
       created(){
-        this.$http.get("https://damp-earth-74898.herokuapp.com/blogapi/categories").then(function (data) {
+        this.$http.get("https://www.wanghyungjun-api.co.uk/blogapi/categories").then(function (data) {
           // this.categories=data.body;
         });
       },

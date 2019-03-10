@@ -43,7 +43,7 @@
       }
   },
   created(){
-    this.$http.get("https://damp-earth-74898.herokuapp.com/blogapi/previousposts", {params:  {category: this.categoryName}}).then(function (data) {
+    this.$http.get("https://www.wanghyungjun-api.co.uk/blogapi/previousposts", {params:  {category: this.categoryName}}).then(function (data) {
       this.postdata=data.body;
     });
     bus.$on("seachChanged",(data)=>{
@@ -51,7 +51,7 @@
     });
     bus.$on("tossCategory",(data)=>{
       this.categoryName=data;
-      this.$http.get("https://damp-earth-74898.herokuapp.com/blogapi/blogapi/previousposts", {params:  {category: this.categoryName}}).then(function (data) {
+      this.$http.get("https://www.wanghyungjun-api.co.uk/blogapi/previousposts", {params:  {category: this.categoryName}}).then(function (data) {
         this.postdata=data.body;
         if(this.postdata.length==0){
           this.nothing=true;
