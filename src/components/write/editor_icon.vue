@@ -2,22 +2,18 @@
     <div class="editor">
       <editor-menu-bar :editor="editor">
         <div class="menubar" slot-scope="{ commands, isActive }">
-
           <button class="menubar__button" :class="{ 'is-active': isActive.bold() }" @click="commands.bold">
             <!--<icon name="paragraph"></icon>-->
             강조
           </button>
-
           <button class="menubar__button" :class="{ 'is-active': isActive.italic() }" @click="commands.italic">
             <!--<icon name="italic" />-->
             기울임
           </button>
-
           <button class="menubar__button" :class="{ 'is-active': isActive.strike() }" @click="commands.strike">
             <!--<icon name="strike" />-->
             지우기
           </button>
-
           <button
             class="menubar__button"
             :class="{ 'is-active': isActive.underline() }"
@@ -26,7 +22,6 @@
             <!--<icon name="underline" />-->
             밑줄
           </button>
-
           <button
             class="menubar__button"
             :class="{ 'is-active': isActive.code() }"
@@ -35,15 +30,6 @@
             <!--<icon name="code" />-->
             코드
           </button>
-
-          <!--<button-->
-            <!--class="menubar__button"-->
-            <!--:class="{ 'is-active': isActive.paragraph() }"-->
-            <!--@click="commands.paragraph"-->
-          <!--&gt;-->
-            <!--<icon name="paragraph" />-->
-          <!--</button>-->
-
           <button
             class="menubar__button"
             :class="{ 'is-active': isActive.heading({ level: 1 }) }"
@@ -51,7 +37,6 @@
           >
             H1
           </button>
-
           <button
             class="menubar__button"
             :class="{ 'is-active': isActive.heading({ level: 2 }) }"
@@ -59,7 +44,6 @@
           >
             H2
           </button>
-
           <button
             class="menubar__button"
             :class="{ 'is-active': isActive.heading({ level: 3 }) }"
@@ -67,7 +51,6 @@
           >
             H3
           </button>
-
           <button
             class="menubar__button"
             :class="{ 'is-active': isActive.bullet_list() }"
@@ -76,7 +59,6 @@
             <!--<icon name="ul" />-->
             UL
           </button>
-
           <button
             class="menubar__button"
             :class="{ 'is-active': isActive.ordered_list() }"
@@ -85,7 +67,6 @@
             <!--<icon name="ol" />-->
             Ol
           </button>
-
           <button
             class="menubar__button"
             :class="{ 'is-active': isActive.blockquote() }"
@@ -94,7 +75,6 @@
             <!--<icon name="quote" />-->
             인용
           </button>
-
           <button
             class="menubar__button"
             :class="{ 'is-active': isActive.code_block() }"
@@ -102,14 +82,12 @@
           >
             코드블록
           </button>
-
           <button
             class="menubar__button"
             @click="commands.horizontal_rule"
           >
             수평선
           </button>
-
           <button
             class="menubar__button"
             @click="commands.undo"
@@ -117,7 +95,6 @@
             <!--<icon name="undo" />-->
             Undo
           </button>
-
           <button
             class="menubar__button"
             @click="commands.redo"
@@ -167,8 +144,7 @@
         name: "editor_icon",
     components: {
       EditorContent,
-      EditorMenuBar,
-      Icon
+      EditorMenuBar
     },
     data(){
       return {
@@ -211,9 +187,8 @@
         }
       },
       posting(){
-        console.log(this.html);
-        this.$http.post("http://127.0.0.1:8000/blogapi/previousposts", {'content': this.html}).then(function (data) {
-          console.log(this.html);
+        console.log(this.json);
+        this.$http.post("http://127.0.0.1:8000/blogapi/posts", {'content': this.html}).then(function () {
         })
       }
     },
@@ -225,15 +200,5 @@
 
 <style lang="scss" scoped>
   @import '../../../public/scss/reset';
-
-  .editor__content{
-    p{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-  }
-
-
+  @import '../../assets/sass/main';
 </style>

@@ -2,12 +2,8 @@
     <section class="write">
       <div class="container">
         <div class="editor">
-          <!--<div id="title" contenteditable="true">제목입니다.</div>-->
-          <!--<div id="content" contenteditable="true" v-on:click="testtwo" v-on:keypress.enter.prevent="createNormal">안녕하세요</div>-->
-          <!--<button v-on:click="test">TEST</button>-->
-          <!--<div id="test">{{this.content}}</div>-->
           <div id="content">
-            <editor ref="write"></editor>
+            <editor></editor>
           </div>
         </div>
       </div>
@@ -30,7 +26,7 @@
     },
     methods: {
       submit: function () {
-        console.log(this.$refs);
+
       }
 
       //   test: function (el) {
@@ -57,24 +53,12 @@
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   /*@import "../../../../static/scss/reset";*/
 
   .write{
     margin: 15px auto 10px auto;
 
-    /*#title{*/
-      /*margin: 0 auto;*/
-      /*max-width: 780px;*/
-      /*font-size: 42px;*/
-      /*font-family: Nanum Gothic, sans-serif;*/
-      /*padding: 0 10px;*/
-      /*white-space: pre-wrap;*/
-
-      /*&:focus{*/
-        /*outline: none;*/
-      /*}*/
-    /*}*/
 
     #content{
       margin: 15px auto 0 auto;

@@ -67,11 +67,12 @@
 
 <style lang="scss">
   @import '../../../public/scss/reset';
+  @import '../../assets/sass/main';
 
   img{
     display: block;
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
   }
 
   .container{
