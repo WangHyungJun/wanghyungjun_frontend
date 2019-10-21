@@ -1,6 +1,5 @@
 <template>
   <header id="appheader">
-    <meta name="naver-site-verification" content="56b1b6dc1d70e4b3f58f47d970ee3667374c406a"/>
     <div class="container">
       <div class="row">
         <div class="nav clearfix">
