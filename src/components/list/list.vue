@@ -37,8 +37,8 @@
   data(){
       return {
         postdata : [],
-        search: '',
         categoryName: 'all',
+        search: '',
         nothing: false
       }
   },

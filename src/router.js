@@ -1,7 +1,8 @@
 import Vue from "vue";
 import Router from "vue-router";
 import main from "./views/main";
-import write from "./views/write"
+import write from "./views/write";
+import login from "./views/Login";
 
 Vue.use(Router);
 
@@ -20,6 +21,11 @@ export default new Router({
       // which is lazy-loaded when the route is visited.
       component: write
         // import(/* webpackChunkName: "about" */ "./views/About.vue")
+    },
+    {
+      path: '/login',
+      name: "login",
+      component: login
     }
   ],
   mode: "history"

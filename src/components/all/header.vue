@@ -1,5 +1,6 @@
 <template>
   <header id="appheader">
+    <meta name="naver-site-verification" content="56b1b6dc1d70e4b3f58f47d970ee3667374c406a"/>
     <div class="container">
       <div class="row">
         <div class="nav clearfix">
@@ -8,7 +9,7 @@
               <li><router-link to="/">Article</router-link></li>
               <li><router-link to="/albums">Albums</router-link></li>
               <li><router-link to="/aboutme">AboutMe</router-link></li>
-              <li><a class="additional" href=".">LogIn</a></li>
+              <li><router-link to="/login" class="additional" href=".">LogIn</router-link></li>
               <li><a class="additional" href=".">Subscribe</a></li>
             </ul>
           </div>
